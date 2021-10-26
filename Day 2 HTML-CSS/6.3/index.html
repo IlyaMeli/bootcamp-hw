@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8a33a67b8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Protfolio</title>
+    <style>
+      body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-color: rgb(149, 171, 184); */
+        background-image: url(https://www.onepixelout.com/wp-content/uploads/2018/12/Christmas-Design-Background-640x430.png);
+      }
+      .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+      }
+      .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 65px;
+        margin: 0px;
+      }
+      h2 {
+        font-size: 25px;
+        font-weight: 300;
+        margin: 0px;
+      }
+      .card-wrapper {
+        display: flex;
+      }
+      .card {
+        width: 200px;
+        height: 300px;
+        margin: 30px;
+        background-color: rgb(41, 44, 46);
+        box-shadow: 0px 21px 16px 1px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+      .tech {
+        max-width: 100%;
+        height: 112.5px;
+      }
+      .cardtext {
+        color: white;
+        text-align: left;
+        padding: 5px;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="hero-container">
+        <div class="title">
+          <h1>Ilya Melihov</h1>
+          <h2>Full Stack Developer</h2>
+        </div>
+        <img id="hero-img" src="/images/ilya.jpg" alt="ilya" width="400px" />
+        <br />
+        <p>
+          My name's Ilya. I'm a <b><span class="job">Programmer </span></b>from
+          Israel, currently live in Ness-Zionna, Enjoy art and and live in the
+          Minimalist approach.
+        </p>
+        <form action="http://google.com/" target="_blank">
+          <button id="contact-button" type="submit">Contact Me!</button>
+        </form>
+      </div>
+      <h2>Technologies i use:</h2>
+      <div class="card-wrapper">
+        <div class="card card1">
+          <img
+            class="tech html"
+            src="http://nsdarabia.com/customers_demos/new_Nouveltech/images/html.jpg"
+          />
+          <p class="cardtext">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
+            culpa saepe sit obcaecati atque!
+          </p>
+        </div>
+        <div class="card card2">
+          <img
+            class="tech js"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--sqXFkEvv--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1920px-Unofficial_JavaScript_logo_2.svg.png"
+          />
+          <p class="cardtext">Lorem ipsum dolor sit amet consectetur, culpa</p>
+        </div>
+        <div class="card card3">
+          <img
+            class="tech react"
+            src="https://onextrapixel.com/wp-content/uploads/2016/04/reactjs-thumb.jpg"
+          />
+          <p class="cardtext">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
+            culpa saepe sit obcaecati atque!
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <ul>
+          <a href="#">
+            <li>
+              <i class="fab fa-facebook"></i>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <i class="fab fa-github"></i>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <i class="fab fa-twitter"></i>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
