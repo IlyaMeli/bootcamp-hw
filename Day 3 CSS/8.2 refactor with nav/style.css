@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(149, 171, 184);
+}
+.main-wrapper {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+#hero-img {
+  width: 40%;
+  float: left;
+  padding-left: 30px;
+}
+.hero-container {
+  height: 60vh;
+  /* border: solid red 3px; */
+}
+.title {
+  padding-bottom: 45px;
+}
+h1 {
+  font-size: 65px;
+  margin: 0px;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0px;
+}
+.card-wrapper {
+  height: 400px;
+  padding-right: 80px;
+  float: right;
+  width: 50%;
+  /* border: solid green 3px; */
+}
+.card {
+  float: right;
+  width: 200px;
+  height: 300px;
+  margin: 30px;
+  background-color: rgb(41, 44, 46);
+  box-shadow: 0px 21px 16px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.tech {
+  max-width: 100%;
+  height: 112.5px;
+}
+.cardtext {
+  color: white;
+  text-align: left;
+  padding: 5px;
+  font-weight: 300;
+}
+.about {
+  font-size: 30px;
+}
+ul {
+  list-style-type: none;
+}
+.nav {
+  width: 100%;
+  height: 80px;
+  background: #31393d;
+  position: sticky;
+}
+button {
+  width: 180px;
+  height: 50px;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+  background: #15181a;
+  color: white;
+  font-size: 25px;
+}
+button:hover {
+  opacity: 1;
+}
+.b1,
+.b2 {
+  float: left;
+  margin-left: 20px;
+  background: #388199;
+}
+.b3 {
+  width: 180px;
+  float: right;
+  margin-right: 20px;
+  border-radius: 50px;
+}

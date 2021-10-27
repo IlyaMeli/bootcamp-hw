@@ -1,0 +1,36 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+div {
+  border: solid 3px;
+  position: absolute;
+  background: white;
+}
+
+.div-1 {
+  width: 250px;
+  height: 200px;
+  top: 10%;
+  left: 30%;
+}
+.div-2 {
+  width: 200px;
+  height: 210px;
+  top: 20%;
+  left: 35%;
+}
+div.div-3 {
+  width: 600px;
+  height: 200px;
+  top: 400px;
+  left: 30%;
+}
+div.div-4 {
+  width: 110px;
+  height: 570px;
+  top: 10%;
+  left: 49%;
+}

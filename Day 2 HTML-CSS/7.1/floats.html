@@ -6,43 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Float</title>
     <style>
-      html {
-        height: 100%;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper > * {
+        margin: 5px;
+      }
+      .wrapper {
+        margin-left: 200px;
+        margin-right: 200px;
       }
       .header {
         background-color: orange;
         height: 15vh;
       }
-      .container {
-        height: 70vh;
-      }
       .side {
         background-color: green;
-        height: 70vh;
+        height: calc(70vh - 20px);
         float: left;
-
-        width: 30%;
+        width: calc(30%);
       }
       .main {
         background-color: purple;
         float: right;
-        height: 70vh;
-        width: 70%;
+        height: calc(70vh - 20px);
+        width: calc(70% - 20px);
       }
       .footer {
         background-color: rgb(130, 255, 108);
         height: 15vh;
       }
+      .clear {
+        clear: both;
+      }
     </style>
   </head>
   <body>
-    <div class="header">Header</div>
-    <div class="container">
+    <div class="wrapper">
+      <div class="header">Header</div>
       <div class="side">Side</div>
       <div class="main">Main</div>
+      <div class="clear"></div>
+      <div class="footer">Footer</div>
     </div>
-    <div class="footer">Footer</div>
   </body>
 </html>

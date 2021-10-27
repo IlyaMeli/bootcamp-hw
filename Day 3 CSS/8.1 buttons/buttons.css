@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #32465f;
+}
+.title {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.main-container {
+  width: 750px;
+  height: 900px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.button-wrapper {
+  text-align: center;
+  padding: 40px;
+}
+button {
+  margin: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button.b1 {
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+}
+button.b2 {
+  width: 135px;
+  height: 45px;
+  font-size: 20px;
+}
+button.b3 {
+  width: 120px;
+  height: 37px;
+  font-size: 15px;
+}
+button {
+  opacity: 1;
+  transition: 0.3s;
+}
+.flat:hover,
+.round:hover {
+  opacity: 0.7;
+}
+.flat.b1 {
+  background-color: #00dd76;
+}
+.flat.b2 {
+  background-color: #ff2220;
+}
+.flat.b3 {
+  background-color: #0b8edd;
+}
+.round,
+.rghost {
+  border-radius: 45px;
+}
+.round.b1 {
+  background-color: #f47900;
+}
+.round.b2 {
+  background-color: #f3ce00;
+}
+.round.b3 {
+  background-color: #7c8b8d;
+}
+.fghost,
+.rghost {
+  background: #32465f;
+}
+
+.fghost.b1 {
+  border: solid 2px #00dd76;
+}
+.fghost.b1:hover {
+  background-color: #00dd76;
+}
+
+.fghost.b2 {
+  border: solid 2px #ff2220;
+}
+.fghost.b2:hover {
+  background-color: #ff2220;
+}
+.fghost.b3 {
+  border: solid 2px #0b8edd;
+}
+.fghost.b3:hover {
+  background-color: #0b8edd;
+}
+
+.rghost.b1 {
+  border: solid 2px #f47900;
+}
+.rghost.b1:hover {
+  background-color: #f47900;
+}
+.rghost.b2 {
+  border: solid 2px #f3ce00;
+}
+.rghost.b2:hover {
+  background-color: #f3ce00;
+}
+.rghost.b3 {
+  border: solid 2px #7c8b8d;
+}
+.rghost.b3:hover {
+  background-color: #7c8b8d;
+}
