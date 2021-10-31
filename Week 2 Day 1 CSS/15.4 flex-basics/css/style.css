@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f8cd;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.box {
+  width: 250px;
+  height: 250px;
+}
+
+.box1 {
+  background-color: green;
+}
+.box2 {
+  background-color: blue;
+}
+.box3 {
+  background-color: red;
+}

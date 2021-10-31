@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    165deg,
+    rgb(255, 255, 255) 63%,
+    rgba(255, 221, 208, 1) 52%
+  );
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+html {
+  font-size: 10px;
+}
+
+.navbar {
+  padding-top: 1.3rem;
+}
+
+img {
+  width: 40rem;
+  height: 40rem;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+}
+.left-side {
+  float: left;
+  width: 50%;
+  padding-top: 6rem;
+}
+.under-title {
+  font-size: 2rem;
+}
+.left-side h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: rgb(251, 203, 184);
+}
+.left-side h1 {
+  display: inline-block;
+  font-size: 7rem;
+  color: rgb(37, 37, 37);
+  line-height: 7rem;
+}
+.left-side p {
+  font-size: 1.7rem;
+  color: rgb(124, 124, 124);
+
+  line-height: 2.2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+ul {
+  display: inline-block;
+  width: 40%;
+  height: 80%;
+  padding-top: 1.2rem;
+}
+ul li {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 8rem;
+  cursor: pointer;
+}
+
+.main-section {
+  padding-top: 15rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: rgb(180, 180, 180);
+  background: rgb(37, 37, 37);
+  display: inline-block;
+  height: 5rem;
+  width: 12rem;
+  margin-right: 2rem;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+}
+.light {
+  background: rgb(255, 255, 255);
+  border: rgb(37, 37, 37) 2px solid;
+  color: rgb(37, 37, 37);
+}
+
+.contact-container {
+  float: right;
+}
+
+.container {
+  padding-left: 40rem;
+  padding-right: 40rem;
+  height: 100vh;
+}
