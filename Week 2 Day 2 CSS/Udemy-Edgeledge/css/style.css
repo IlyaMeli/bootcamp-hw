@@ -122,3 +122,23 @@ img {
   border-radius: 50%;
   margin-bottom: 15px;
 }
+
+.cases img:hover{
+  opacity: 0.7;
+}
+
+/* Section header */
+
+.section-header{
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align: center;
+}
+
+.sction-header h2{
+  font-size: 40px;
+  margin: 20px 0;
+}
