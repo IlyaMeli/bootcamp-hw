@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  background: black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background: rgb(0, 0, 0);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px red solid;
+  color: white;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.box::after {
+  content: "";
+  background: rgb(0, 0, 0);
+  height: 50%;
+  width: 110%;
+  position: absolute;
+  top: 5;
+  right: 1;
+  z-index: -1;
+}
+.box::before {
+  content: "";
+  background: rgb(0, 0, 0);
+  height: 110%;
+  width: 70%;
+  position: absolute;
+  top: 1;
+  left: 5;
+  z-index: -1;
+}

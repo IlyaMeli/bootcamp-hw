@@ -87,10 +87,19 @@ ul li {
   line-height: 5rem;
   border-radius: 3rem;
   font-size: 1.4rem;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: rgb(251, 203, 184);
+  color: rgb(37, 37, 37);
 }
 .light {
   background: rgb(255, 255, 255);
   border: rgb(37, 37, 37) 2px solid;
+  color: rgb(37, 37, 37);
+}
+.light:hover {
+  background: white;
   color: rgb(37, 37, 37);
 }
 

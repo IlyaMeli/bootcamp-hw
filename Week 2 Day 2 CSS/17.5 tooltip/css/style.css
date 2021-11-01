@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span {
+  color: rgb(185, 5, 5);
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+span:hover::after {
+  content: attr(value);
+  width: 10rem;
+  background-color: yellow;
+  position: absolute;
+  left: 0px;
+  right: 0%;
+  bottom: 85%;
+  font-size: 0.8rem;
+  text-align: center;
+  color: black;
+  z-index: 1;
+  padding: 0.3rem;
+  border-radius: 20px;
+}
+span:hover::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 10%;
+  bottom: 70%;
+  background: yellow;
+}
+
+.container {
+  width: 50rem;
+  padding: 2rem;
+  border: solid 3px black;
+}
