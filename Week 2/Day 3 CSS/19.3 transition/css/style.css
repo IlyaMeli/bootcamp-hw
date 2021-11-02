@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 800px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: rgb(223, 223, 223);
+  top: 0;
+  position: absolute;
+}
+
+button {
+  background-color: white;
+  border: solid 3px black;
+  font-size: 15px;
+  width: 120px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn3:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "YEAH";
+  position: absolute;
+  background-color: red;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translatey(-100%);
+  font-weight: bold;
+}
+
+.btn3:hover::before {
+  content: "YEAH";
+  position: absolute;
+  background-color: red;
+  transform: translatey(0%);
+  width: 100%;
+  height: 100%;
+}
+
+.btn2 {
+  color: rgb(0, 0, 0);
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+  font-weight: bold;
+}
+.btn2:hover {
+  color: white;
+}
+
+.btn2:before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translatex(-100%);
+  z-index: -1;
+}
+.btn2:hover::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  transform: translatex(0%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn1 {
+  z-index: 0;
+}
+
+.btn1:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "";
+  position: absolute;
+  background-color: yellow;
+  right: 30%;
+  bottom: 160%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  z-index: -1;
+}
+
+.btn1:hover::before {
+  content: "";
+  right: 0%;
+  bottom: 0%;
+  position: absolute;
+  background-color: yellow;
+  transform: rotate(0);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn4:before {
+  content: "Scale & Opacity";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  transform: scale(2);
+  visibility: hidden;
+}
+.btn4:hover::before {
+  visibility: visible;
+  content: "Scale & Opacity";
+  opacity: 0;
+  position: absolute;
+  background-color: black;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+}

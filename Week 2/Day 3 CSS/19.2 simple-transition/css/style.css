@@ -1,0 +1,25 @@
+body {
+  background: #333;
+}
+
+.box {
+  background: rgb(160, 90, 182);
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  background: rgb(255, 183, 183);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform: translatex(100%);
+  transition: all 1s ease-in-out;
+}
+
+.box:hover::before {
+  background: rgb(105, 170, 255);
+  transform: translatex(0%);
+}
