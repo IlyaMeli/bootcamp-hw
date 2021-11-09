@@ -1,7 +1,7 @@
 const leapYear = (year) => {
-  if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
+  if (year % 4 === 0 && year % 400 === 0) {
     return "A leap year";
-  } else if (year % 4 === 0 && year % 100 === 0) {
+  } else if (year % 100 === 0) {
     return "Not a leap year";
   } else if (year % 4 === 0) {
     return "A leap year";
@@ -10,6 +10,6 @@ const leapYear = (year) => {
   }
 };
 
-console.log("expected a leap: " + leapYear(2012));
+console.log("expected a leap: " + leapYear(2120));
 console.log("expected a not a leap: " + leapYear(2100));
-console.log("expected a leap year: " + leapYear(2400));
+console.log("expected a leap year: " + leapYear(2140));

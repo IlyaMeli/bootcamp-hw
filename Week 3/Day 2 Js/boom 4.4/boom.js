@@ -1,5 +1,5 @@
-const boom = (num) => {
-  let res = "";
+const sevenBoom = (num) => {
+  let res;
   for (let i = 1; i <= num; i++) {
     res = i;
     if (res % 7 === 0 && res.toString().includes(7)) {
@@ -10,4 +10,4 @@ const boom = (num) => {
     console.log(res);
   }
 };
-boom(18);
+sevenBoom(18);
