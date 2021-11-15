@@ -76,4 +76,17 @@ const shiftLetter = (string) => {
   return res;
 };
 
-//didnt finish yet
+const swapCase = (str, callback) => {
+  res = "";
+  let strArr = str.split(" ");
+  strArr.forEach((word, i) => {
+    if (strArr.indexOf(word) % 2 !== 0) {
+      res += `${callback(word)} `;
+    } else {
+      res += `${word} `;
+    }
+  });
+  return res;
+};
+
+console.log(swapCase("hello world my name is ilya", capitalize));
