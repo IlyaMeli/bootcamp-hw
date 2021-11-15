@@ -50,16 +50,27 @@ const getBirthdays = (arr) => {
   });
   return dateArr;
 };
-// console.log(getBirthdays(data));
+console.log(getBirthdays(data));
 
-const getDifferentFoor = (arr) => {
-  let res = {};
-  arr.forEach((element) => {
-    if (({ meat, fish } = element.favoriteFoods)) {
-      res[element.favoriteFoods.meat]++;
-      res[element.favoriteFoods.fish]++;
-    }
+const getDifferentFood = (arr) => {
+  let foodArr = [];
+  let allFood = {};
+  arr.forEach((user) => {
+    user.favoriteFoods.meats.forEach((meaty) => {
+      if (allFood[meaty]) {
+        allFood[meaty]++;
+      } else {
+        allFood[meaty] = 1;
+      }
+    });
+    user.favoriteFoods.fish.forEach((fishy) => {
+      if (allFood[fishy]) {
+        allFood[fishy]++;
+      } else {
+        allFood[fishy] = 1;
+      }
+    });
   });
-  return res;
+  return allFood;
 };
-console.log(getDifferentFoor(data));
+console.log(getDifferentFood(data));
