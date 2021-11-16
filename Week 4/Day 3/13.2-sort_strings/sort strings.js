@@ -4,24 +4,14 @@ console.log(foods.sort());
 console.log(foods.sort().reverse());
 
 const foodsWithUpperCase = [
-  "falafel",
-  "Sabich",
+  "sabich",
+  "sbich",
   "hummus",
   "pizza with extra pineapple",
+  "z",
 ];
-//ascending
-console.log(
-  foodsWithUpperCase.sort((a, b) => {
-    if (a.toLowerCase() > b.toLowerCase()) {
-      return -1;
-    }
-    if (a.toLowerCase() < b.toLowerCase()) {
-      return 1;
-    }
-    return 0;
-  })
-);
-//descending
+
+// ascending
 console.log(
   foodsWithUpperCase.sort((a, b) => {
     if (a.toLowerCase() < b.toLowerCase()) {
@@ -34,6 +24,27 @@ console.log(
   })
 );
 
+//descending
+console.log(
+  foodsWithUpperCase.sort((a, b) => {
+    if (a.toLowerCase() > b.toLowerCase()) {
+      return -1;
+    }
+    if (a.toLowerCase() < b.toLowerCase()) {
+      return 1;
+    } else {
+      for (let i = 0; i < a.length; i++) {
+        if (a.charCodeAt().toLowerCase() > b.charCodeAt().toLowerCase()) {
+          return -1;
+        }
+        if (a.charCodeAt().toLowerCase() < b.charCodeAt().toLowerCase()) {
+          return 1;
+        }
+      }
+    }
+    // return 0;
+  })
+);
 const words = ["apple", "supercalifragilisticexpialidocious", "hi", "zoo"];
 
 console.log(
