@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <ul>
+      <li>title 1</li>
+      <li class="start-here">title 2</li>
+      <li>
+        <ul>
+          <li>sub title 1</li>
+          <li>sub title 2</li>
+          <li>sub title 3</li>
+        </ul>
+      </li>
+      <li>title 3</li>
+    </ul>
+    <div>
+      <p>Hello World!</p>
+    </div>
+  </body>
+  <script>
+    let startHere = document.querySelector(".start-here");
+    startHere.textContent = "main title";
+    let newSubTitle = document.createElement("li");
+    newSubTitle.innerText = "sub title 4";
+    let ul = document.querySelectorAll("ul");
+    let ul2 = document.querySelector("ul");
+    ul[1].appendChild(newSubTitle);
+    let liGroup = ul[0].querySelectorAll("li");
+    ul2.removeChild(liGroup[liGroup.length - 1]);
+    document.querySelector("title").innerText = "Master Of The Dom";
+    document.querySelector("p").innerText = "Berlin Capsule Rocks!";
+  </script>
+</html>
