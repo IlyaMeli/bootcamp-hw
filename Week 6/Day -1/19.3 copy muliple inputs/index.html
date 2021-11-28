@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      width: 30%;
+      height: 30%;
+      border: solid 2px black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      justify-content: center;
+      gap: 5px;
+    }
+    input {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+    }
+    #submit {
+      margin-top: 10px;
+      width: 100px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Text to copy:</h1>
+      <h2>123456</h2>
+    </div>
+    <div class="container">
+      <form>
+        <input class="input" type="text" />
+        <input class="input" type="text" />
+        <input class="input" type="text" />
+        <input class="input" type="text" />
+        <input class="input" type="text" />
+        <input class="input" type="text" />
+        <input id="submit" type="submit" value="Verify" />
+      </form>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
