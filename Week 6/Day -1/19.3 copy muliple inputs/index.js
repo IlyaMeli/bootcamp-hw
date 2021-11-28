@@ -12,7 +12,7 @@ for (let i = 0; i < inputs.length; i++) {
     }
   });
   inputs[i].addEventListener("input", () => {
-    if (inputs[i].value) {
+    if (inputs[i].value && inputs[i + 1] !== undefined) {
       inputs[i + 1].focus();
     }
     if (inputs[i].value.length > 1) {
