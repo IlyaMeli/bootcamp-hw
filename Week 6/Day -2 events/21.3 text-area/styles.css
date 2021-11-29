@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+textarea {
+  height: 150px;
+  width: 100%;
+}
+.box {
+  border: solid 2px rgba(255, 0, 0, 0.226);
+  padding: 30px;
+  background-color: white;
+}
+.message {
+  position: absolute;
+  background-color: black;
+  display: none;
+}
+.x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
