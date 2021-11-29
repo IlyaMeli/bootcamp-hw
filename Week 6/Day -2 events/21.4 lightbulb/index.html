@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LightBulb</title>
+  </head>
+  <style>
+    img {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <img src="/BULB-OFF.jpg" />
+  </body>
+  <script>
+    let img = document.querySelector("img");
+    let status = true;
+    img.addEventListener("click", () => {
+      status ? (img.src = "/BULB-OFF.jpg") : (img.src = "/BULB-ON.jpg");
+      status = !status;
+    });
+  </script>
+</html>
