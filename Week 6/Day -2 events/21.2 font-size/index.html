@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font-Size</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 70vh;
+    }
+    button {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      font-size: 45px;
+    }
+  </style>
+  <body>
+    <h1>Hello</h1>
+    <div>
+      <button class="plus">+</button>
+      <button class="minus">-</button>
+    </div>
+  </body>
+
+  <script>
+    let plus = document.querySelector(".plus");
+    let minus = document.querySelector(".minus");
+    let h1El = document.querySelector("h1");
+    let computedStyle = window
+      .getComputedStyle(h1El)
+      .getPropertyValue("font-size");
+    let fontSize = parseFloat(computedStyle);
+    console.log(fontSize);
+    let counter = fontSize;
+
+    plus.addEventListener("click", () => {
+      if (counter < 100) {
+        counter++;
+        h1El.style.fontSize = `${counter}px`;
+      }
+    });
+    minus.addEventListener("click", () => {
+      if (counter > 6) {
+        counter--;
+        h1El.style.fontSize = `${counter}px`;
+      }
+    });
+  </script>
+</html>
