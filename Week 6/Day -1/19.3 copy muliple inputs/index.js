@@ -7,9 +7,9 @@ for (let i = 0; i < inputs.length; i++) {
     if (e.clipboardData.getData("text")[i] !== undefined) {
       inputs[i].value = e.clipboardData.getData("text")[i];
     }
-    if (inputs[inputs.length - 1].value) {
-      submit.click();
-    }
+    // if (inputs[inputs.length - 1].value) {
+    //   submit.click();
+    // }
   });
   inputs[i].addEventListener("input", () => {
     if (inputs[i].value && inputs[i + 1] !== undefined) {

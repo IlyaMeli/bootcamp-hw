@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <h1>Checking Text</h1>
+    <input type="text" value="" />
+    <button type="submit">Check</button>
+  </body>
+  <script>
+    let inputEl = document.querySelector("input");
+    let buttonEl = document.querySelector("button");
+    let h1El = document.querySelector("h1");
+
+    buttonEl.addEventListener("click", () => {
+      if (inputEl.value >= 18) {
+        h1El.innerHTML = "you can drink appear";
+      } else {
+        h1El.innerHTML = "you’re too young";
+      }
+    });
+  </script>
+</html>
