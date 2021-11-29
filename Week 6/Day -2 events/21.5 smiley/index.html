@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smiley</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>submit</button>
+    <div class="smiley-container"></div>
+  </body>
+  <script>
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");
+    let img = document.createElement("img");
+    let body = document.querySelector("body");
+    let smileyContainer = document.querySelector(".smiley-container");
+
+    button.addEventListener("click", () => {
+      if (!Number(input.value)) {
+        alert("Has To be A Number , and Bigger than 0 ");
+      }
+      while (smileyContainer.firstChild) {
+        smileyContainer.removeChild(smileyContainer.firstChild);
+      }
+      for (let i = 0; i < input.value; i++) {
+        img[i] = document.createElement("img");
+        img[i].setAttribute("src", "smiley.png");
+        smileyContainer.appendChild(img[i]);
+      }
+    });
+  </script>
+</html>
