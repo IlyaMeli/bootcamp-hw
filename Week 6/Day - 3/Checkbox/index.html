@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 80vh;
+    }
+    .checkbox-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      height: 20%;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="checkbox-container">
+      <input type="checkbox" />
+      <img src="cat.jpg" alt="cat" />
+    </div>
+  </body>
+  <script>
+    let img = document.querySelector("img");
+    let checkBox = document.querySelector("input");
+    checkBox.addEventListener("click", (e) => {
+      checkBox.checked
+        ? (img.style.display = "block")
+        : (img.style.display = "none");
+    });
+  </script>
+</html>
