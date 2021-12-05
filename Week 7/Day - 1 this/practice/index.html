@@ -9,14 +9,13 @@
   <body></body>
 
   <script>
-    function someFunc() {
-      console.log(this);
-    }
-    let otherFunc = () => {
-      console.log(this);
-      console.log("cehck");
+    "use strict";
+    Array.prototype.push = function (element) {
+      console.log(element);
     };
-    someFunc();
-    otherFunc();
+
+    let arr = [];
+    arr.push("check");
+    console.log(arr);
   </script>
 </html>
