@@ -24,12 +24,8 @@ function sortWords(arr) {
 }
 
 makeAllCaps(["d", "b", "a"])
-  .then((res) => {
-    return sortWords(res);
-  })
-  .then((newRes) => {
-    console.log(newRes);
-  })
+  .then((res) => sortWords(res))
+  .then((data) => console.log(data))
   .catch((err) => {
     console.log(err);
   });
