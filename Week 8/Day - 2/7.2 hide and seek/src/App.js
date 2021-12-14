@@ -1,34 +1,24 @@
 import React, { Component } from "react";
 import "./App.css";
+import Box from "./Box";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hidden: false, display: "none" };
+  state = { display: "none" };
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ display: "block" }), 1000);
   }
 
-  showCard = () => {
-    this.setState({ hidden: !this.state.hidden });
-    this.state.hidden
-      ? this.setState({ display: "none" })
-      : this.setState({ display: "block" });
-  };
+  componentDidUpdate() {
+    setTimeout(() => this.setState({ display: "none" }), 4000);
+  }
 
   render() {
     return (
       <div>
-        <button onClick={this.showCard} className="btn">
-          Show Card
-        </button>
-        <div
-          className="box"
-          style={{
-            backgroundColor: "blue",
-            height: "100px",
-            width: "100px",
-            display: `${this.state.display}`,
-          }}
-        ></div>
+        <Box size="100px" reveal={this.state.display} />
+        <Box size="70px" reveal={this.state.display} />
+        <Box size="50px" reveal={this.state.display} />
       </div>
     );
   }
