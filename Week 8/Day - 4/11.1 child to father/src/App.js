@@ -6,17 +6,19 @@ class App extends Component {
   colors = ["blue", "red", "yellow"];
   state = { colorState: "" };
 
-  handleClickEvent = (e) => {
-    this.setState({ colorState: e.target.textContent });
+  handleClickEvent = (item) => {
+    this.setState({ colorState: item });
   };
 
   createBtns = () => {
-    return this.colors.map((item) => <CustomButton color={item} />);
+    return this.colors.map((item) => (
+      <CustomButton callback={this.handleClickEvent} color={item} />
+    ));
   };
 
   render() {
     return (
-      <div onClick={this.handleClickEvent}>
+      <div>
         {this.createBtns()}
         <div>Chosen color: {this.state.colorState}</div>
       </div>
