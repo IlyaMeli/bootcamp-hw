@@ -12,6 +12,7 @@ export default class ProductDetails extends Component {
       console.log(this.state.product);
     });
   }
+
   createProduct() {
     const { title, imageUrl, price, size } = this.state.product;
     return (
