@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from "axios";
 import Avatar from "./componenets/Avatar";
 import Input from "./componenets/Input";
 import avatarApi from "./api";
-import { v4 as uuidv4 } from "uuid";
 
 class App extends Component {
   state = { data: [], name: "", imgUrl: "" };
@@ -14,16 +12,39 @@ class App extends Component {
     this.setState({ data });
   }
   handleCreate = async () => {
-    let dataCopy = [...this.state.data];
-    const newAvatar = {
-      id: uuidv4(),
-      name: this.state.name,
-      imgUrl: this.state.imgUrl,
-    };
     try {
-      const res = await avatarApi.post("avatars/", { newAvatar });
+      let dataCopy = [...this.state.data];
+      const newAvatar = {
+        name: this.state.name,
+        imgUrl: this.state.imgUrl,
+      };
+      await avatarApi.post("/avatars/", newAvatar);
+      dataCopy.push(newAvatar);
+      this.setState({ data: dataCopy });
     } catch (error) {}
-    dataCopy.push(newAvatar);
+  };
+
+  handleDelete = async (id) => {
+    try {
+      const dataCopy = [...this.state.data];
+      const filteredData = dataCopy.filter((obj) => obj.id !== id);
+      await avatarApi.delete(`/avatars/${id}`);
+      this.setState({ data: filteredData });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  handleUpdate = async (id, value) => {
+    const dataCopy = [...this.state.data];
+    let objIdx = dataCopy.findIndex((element) => {
+      return element.id === id;
+    });
+    // const updatedItem ={
+    //   name: value,
+    //   imgUrl,
+    // }
+    dataCopy[objIdx].name = value;
     this.setState({ data: dataCopy });
   };
 
@@ -36,7 +57,16 @@ class App extends Component {
     return data.map((obj) => {
       return (
         <div key={obj.id}>
-          <Avatar id={obj.id} name={obj.name} imgUrl={obj.imgUrl} />
+          <Avatar
+            Delete={() => {
+              this.handleDelete(obj.id);
+            }}
+            Update={() => {
+              this.handleUpdate(obj.id, this.state.name);
+            }}
+            name={obj.name}
+            imgUrl={obj.imgUrl}
+          />
         </div>
       );
     });
