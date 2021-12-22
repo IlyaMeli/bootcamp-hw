@@ -5,7 +5,7 @@ import Input from "./componenets/Input";
 import avatarApi from "./api";
 
 class App extends Component {
-  state = { data: [], name: "", imgUrl: "" };
+  state = { data: [], name: "", imgUrl: "" ,update:""};
 
   async componentDidMount() {
     const { data } = await avatarApi.get("avatars");
@@ -40,11 +40,12 @@ class App extends Component {
     let objIdx = dataCopy.findIndex((element) => {
       return element.id === id;
     });
-    // const updatedItem ={
-    //   name: value,
-    //   imgUrl,
-    // }
-    dataCopy[objIdx].name = value;
+    const updatedItem = {
+      ...dataCopy[objIdx],
+      name: value,
+    };
+    dataCopy[objIdx] = updatedItem;
+    await avatarApi.put(`/avatars/${id}`, updatedItem);
     this.setState({ data: dataCopy });
   };
 
@@ -62,10 +63,16 @@ class App extends Component {
               this.handleDelete(obj.id);
             }}
             Update={() => {
-              this.handleUpdate(obj.id, this.state.name);
+              this.handleUpdate(obj.id, this.state.update);
             }}
             name={obj.name}
             imgUrl={obj.imgUrl}
+          />
+          <Input
+            onChange={(e) => {
+              this.handleInput("update", e.target.value);
+            }}
+            label="Update"
           />
         </div>
       );
