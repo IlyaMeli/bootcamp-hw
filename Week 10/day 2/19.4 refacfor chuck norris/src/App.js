@@ -6,6 +6,8 @@ function App() {
   const [myJoke, setMyJoke] = useState([]);
   const [categoryData, setCategoryData] = useState(null);
   const [isLoading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [searchValue, setSearchValue] = useState(null);
 
   useEffect(async () => {
     setLoading(true);
@@ -31,6 +33,7 @@ function App() {
       );
     });
   };
+
   const getJokeFromCategory = async (category) => {
     setLoading(true);
     const { data } = await axios.get(
@@ -41,10 +44,31 @@ function App() {
     setLoading(false);
   };
 
+  const showListOfJokes = () => {
+    {
+      return searchValue.map((joke) => {
+        return <li key={joke.value}>{joke.value}</li>;
+      });
+    }
+  };
+
+  const handleSearch = async () => {
+    setLoading(true);
+    const { data } = await axios.get(
+      `https://api.chucknorris.io/jokes/search?query=${inputValue}`
+    );
+    console.log(data.result);
+    setSearchValue(data.result);
+    setLoading(false);
+  };
+
   return (
     <>
       {categoryData && createCategory()}
       {isLoading ? <div>Loading...🍤</div> : <div>{myJoke}</div>}
+      <input type="text" onChange={(e) => setInputValue(e.target.value)} />
+      <button onClick={handleSearch}>🍤</button>
+      {searchValue && <ul>{showListOfJokes()}</ul>}
     </>
   );
 }
