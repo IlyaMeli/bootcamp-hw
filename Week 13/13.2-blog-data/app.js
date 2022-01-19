@@ -11,24 +11,24 @@ mongoClient.connect(
     }
     const db = client.db(databaseName);
     db.collection("users").createIndex({ email: 1 }, { unique: true });
-    db.collection("users").insertMany(
-      [
-        {
-          name: "timo",
-          email: "timo2@gmail.com",
-        },
-        {
-          name: "leo",
-          email: "leo@gmail.com",
-        },
-      ],
-      (error, result) => {
-        if (error) {
-          return console.log(error.message);
-        }
-        console.log("Connected successfully to Database");
-      }
-    );
+    // db.collection("users").insertMany(
+    //   [
+    //     {
+    //       name: "timo2",
+    //       email: "timo2@gmail.com",
+    //     },
+    //     {
+    //       name: "leo2",
+    //       email: "leo2@gmail.com",
+    //     },
+    //   ],
+    //   (error, result) => {
+    //     if (error) {
+    //       return console.log(error.message);
+    //     }
+    //     console.log("Connected successfully to Database");
+    //   }
+    // );
     db.collection("posts").insertMany(
       [
         {
@@ -40,6 +40,15 @@ mongoClient.connect(
             $id: "ObjectId('61e6bfd32541f6da64a1ec06')",
             $db: "users",
           },
+          comments: [
+            {
+              text: "comment1",
+              Owner: {
+                $ref: "users",
+                $id: "ObjectId('61e6bfd32541f6da64a1ec06')",
+              },
+            },
+          ],
         },
       ],
       (error, result) => {
